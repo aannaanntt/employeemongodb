@@ -8,15 +8,15 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document (collection = "employees")
 public class Employee {
    
-    private String name;
+    private String username;
     private String mail;
     @Id private int id;
     private String dob;
 	public String getName() {
-		return name;
+		return username;
 	}
 	public void setName(String name) {
-		this.name = name;
+		this.username = name;
 	}
 	public String getMail() {
 		return mail;
@@ -38,11 +38,11 @@ public class Employee {
 	}
 	@Override
 	public String toString() {
-		return "Employee [name=" + name + ", mail=" + mail + ", id=" + id + ", dob=" + dob + "]";
+		return "Employee [name=" + username + ", mail=" + mail + ", id=" + id + ", dob=" + dob + "]";
 	}
 	public Employee(String name, String mail, int id, String dob) {
 		super();
-		this.name = name;
+		this.username = name;
 		this.mail = mail;
 		this.id = id;
 		this.dob = dob;
